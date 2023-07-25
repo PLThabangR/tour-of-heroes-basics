@@ -1,0 +1,5 @@
+<!--<input (keyup)="changeImage($event)" [value]="imageUrl">-->
+<app-post  *ngFor="let image of images; let i=index"   [postImage]="image"  (imageSelected)="logImage($event)">
+    <p>{{i}}</p>
+</app-post>
+

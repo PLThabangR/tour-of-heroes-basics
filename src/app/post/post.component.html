@@ -1,0 +1,15 @@
+
+
+
+<button (click)="blueClass =!blueClass" [ngClass]="{blue: blueClass}"
+[ngStyle]="{'font-size.px': fontSize}"
+>Toggle</button>
+
+<hr>
+
+<img [src]="postImage"  (click)="imageSelected.emit(postImage)">
+<h2>{{name| uppercase}}</h2>
+<p *ngIf="blueClass">{{currentDate | date :'short'}}</p>
+<p>{{money | currency :'EUR' }}</p>
+<p>{{temperature | number :'1.2-5'}}</p>
+<pre>{{pizza |json}}</pre>
